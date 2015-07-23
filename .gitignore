@@ -1,0 +1,10 @@
+.idea/
+node_modules/
+.grunt
+lib-cov
+logs
+*.log
+nodemonignore
+.sass-cache
+npm-debug.log
+

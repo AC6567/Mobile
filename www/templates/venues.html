@@ -1,0 +1,26 @@
+<ion-view view-title="Venues" class="venues">
+  <ion-nav-title>
+    <div><img src="img/tour-journal-word-logo1.png"></div>
+  </ion-nav-title>
+  <ion-content locking="true">
+  <ion-nav-title>
+    <div><img src="img/tour-journal-word-logo1.png"></div>
+  </ion-nav-title>
+    <div class="bar bar-header item-input-inset">
+      <label class="item-input-wrapper">
+        <i class="icon ion-ios-search placeholder-icon"></i>
+        <input type="search" placeholder="Search">
+      </label>
+      <button class="button button-clear">
+        Cancel
+      </button>
+    </div>
+
+    <a ng-click="getVenuePage($index)" class="item item-thumbnail-left" href="#" ng-repeat="venue in venues track by $index">
+      <img src="{{venue.profile_img}}">
+      <h2>{{venue.id}}</h2>
+      <p>{{venue.location}}</p>
+    </a>
+
+  </ion-content>
+</ion-view>

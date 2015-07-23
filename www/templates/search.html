@@ -1,0 +1,50 @@
+<ion-view view-title="Search" class="search">
+  <ion-nav-title>
+    <div><img src="img/tour-journal-word-logo1.png"></div>
+  </ion-nav-title>
+  <ion-content locking="true">
+    <div class="bar bar-header item-input-inset">
+      <label class="item-input-wrapper">
+        <i class="icon ion-ios-search placeholder-icon"></i>
+        <input id="search" class="search" placeholder="Search" ng-model="search.searchText" ng-keyup="getResults(search)">
+      </label>
+      <button class="button button-clear">
+        Cancel
+      </button>
+    </div>
+
+    <div class="list search">
+
+      <div class="item item-divider">
+        Results
+      </div>
+
+        <a class="item item-avatar" ng-click="getArtistPage($index)" href="#" ng-repeat="result in results track by $index">
+          <img ng-src="{{result.profile_img}}">
+          <h2>{{result.id}}</h2>
+          <div class="inline-profile-rating">
+            <span>
+              <i class="icon ion-ios-star"></i>
+            </span>
+            <span>
+              <i class="icon ion-ios-star"></i>
+            </span>
+            <span>
+              <i class="icon ion-ios-star"></i>
+            </span>
+            <span>
+              <i class="icon ion-ios-star-half"></i>
+            </span>
+            <span>
+              <i class="icon ion-ios-star-outline"></i>
+            </span>
+            <img src="img/tag.png" alt="">
+            <span>{{result.genre}}</span>
+          </div>
+        </a>
+
+    </div>
+
+
+  </ion-content>
+</ion-view>
